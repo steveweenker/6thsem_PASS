@@ -5,6 +5,7 @@
   },
   "deploy": {
     "startCommand": "python3 monitor.py",
-    "restartPolicyType": "ALWAYS"
+    "restartPolicyType": "ALWAYS",
+    "restartPolicyMaxRetries": 10
   }
 }
