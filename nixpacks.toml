@@ -1,12 +1,15 @@
-# Correct syntax for Railway/Nixpacks
+# Working Nixpacks configuration for Railway
 [phases.setup]
 cmds = [
   "apt-get update",
-  "apt-get install -y wget gnupg libnss3 libatk-bridge2.0-0 libdrm2 libxkbcommon0 libgbm1 libasound2t64 fonts-liberation"
+  "apt-get install -y python3 python3-pip python3-venv wget gnupg"
 ]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = [
+  "pip3 install --upgrade pip",
+  "pip3 install -r requirements.txt"
+]
 
 [phases.build]
 cmds = [
@@ -15,4 +18,4 @@ cmds = [
 ]
 
 [start]
-cmd = "python monitor.py"
+cmd = "python3 monitor.py"
