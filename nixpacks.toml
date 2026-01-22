@@ -1,6 +1,4 @@
-[providers.python]
-version = "3.10"
-
+# Correct syntax for Railway/Nixpacks
 [phases.setup]
 cmds = [
   "apt-get update",
@@ -13,7 +11,7 @@ cmds = ["pip install -r requirements.txt"]
 [phases.build]
 cmds = [
   "playwright install chromium",
-  "playwright install-deps"
+  "playwright install-deps chromium"
 ]
 
 [start]
